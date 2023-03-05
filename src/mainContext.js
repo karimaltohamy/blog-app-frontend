@@ -11,7 +11,7 @@ const MainProvider = ({ children }) => {
     if (!user) {
       axios.get("/api/profile").then(({ data }) => setUser(data));
     }
-  }, []);
+  }, [user]);
 
   return (
     <mainContext.Provider value={{ user, setUser }}>

@@ -11,7 +11,7 @@ const PostPage = () => {
 
   useEffect(() => {
     axios.get(`api/posts/${id}`).then(({ data }) => setPost(data));
-  }, []);
+  }, [id]);
 
   return post ? (
     <div className="mt-[70px] mb-5">

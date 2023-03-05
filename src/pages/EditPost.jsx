@@ -34,7 +34,7 @@ const EditPost = () => {
       setCategory(data.category);
       setContent(data.content);
     });
-  }, []);
+  }, [id]);
 
   const handleEditPost = async (e) => {
     e.preventDefault();
