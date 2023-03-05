@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-200;
+  }
+
+  input {
+    @apply py-1 px-3 rounded-md block w-full;
+  }
+}
