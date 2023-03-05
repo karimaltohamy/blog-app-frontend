@@ -36,7 +36,7 @@ const PostPage = () => {
       )}
       <div className="w-full h-[200px] md:h-[300px] my-4">
         <img
-          src={"http://localhost:5000/" + post.cover}
+          src={"https://blog-app-backend-cmtc.onrender.com/" + post.cover}
           alt=""
           className="h-full w-full object-cover rounded-md"
         />

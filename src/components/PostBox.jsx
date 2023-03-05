@@ -10,7 +10,7 @@ const Post = ({ post }) => {
     >
       <div className="w-full lg:w-1/2">
         <img
-          src={"http://localhost:5000/" + post.cover}
+          src={"https://blog-app-backend-cmtc.onrender.com/" + post.cover}
           alt=""
           className="w-full h-[200px] md:h-[250px] object-cover rounded-md"
         />
