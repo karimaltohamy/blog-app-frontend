@@ -7,7 +7,7 @@ const Home = () => {
 
   useEffect(() => {
     axios.get("api/posts").then(({ data }) => setPosts(data));
-  });
+  }, []);
   return (
     <div className="mt-7">
       {posts
