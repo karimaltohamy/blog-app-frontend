@@ -9,7 +9,7 @@ import CreatePost from "./pages/CreatePost";
 import PostPage from "./pages/PostPage";
 import EditPost from "./pages/EditPost";
 
-axios.defaults.baseURL = "https://blog-app-backend-cmtc.onrender.com";
+axios.defaults.baseURL = "https://baby-blue-raven-veil.cyclic.app";
 axios.defaults.withCredentials = true;
 
 function App() {

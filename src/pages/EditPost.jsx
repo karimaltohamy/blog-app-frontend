@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ReactQuill from "react-quill";
-import { useNavigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 
 const modules = {
   toolbar: [
@@ -25,6 +25,7 @@ const EditPost = () => {
   const [category, setCategory] = useState("");
   const [content, setContent] = useState("");
   const [files, setFiles] = useState("");
+  const [redirect, setRedirect] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -50,11 +51,16 @@ const EditPost = () => {
 
     try {
       await axios.put(`api/editPost/${id}`, dataFrom);
-      navigate("/");
+      //   navigate("/");
+      setRedirect(true);
     } catch (err) {
       console.log(err);
     }
   };
+
+  if (redirect) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <form onSubmit={handleEditPost} className="mt-7 mb-5">

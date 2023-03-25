@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useContext, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { mainContext } from "../mainContext";
+import Cookies from "js-cookie";
 
 const Login = () => {
   const { setUser } = useContext(mainContext);
@@ -16,6 +17,7 @@ const Login = () => {
       const { data } = await axios.post("api/login", { email, password });
       setRedirect(true);
       setUser(data);
+      Cookies.set("token", data.token);
     } catch (err) {
       console.log(err);
     }
